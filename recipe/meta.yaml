@@ -1,5 +1,5 @@
 {% set name = "paracelsus" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paracelsus-{{ version }}.tar.gz
-  sha256: c57355a56b5d6407d1109b6308beea44fc5613c1f22e5aef2289ddd1d3fd8852
+  sha256: 97158ae4550c109ac06006cdf0fbc86f14b5ecd044eab78420096c03c2f88335
 
 build:
   entry_points:
