@@ -1,5 +1,5 @@
 {% set name = "paracelsus" %}
-{% set version = "0.5.2" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paracelsus-{{ version }}.tar.gz
-  sha256: 7ac7c2cfbea0d263ea624c461358d41bfa800e8c34ba92c0ef9c5d0401af44ac
+  sha256: c9ba28f351ffdcac3f55634b9c055394fac42860bd2f510b503f93759fc6dd44
 
 build:
   entry_points:
@@ -18,15 +18,16 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.10
     - setuptools >=67.0
     - setuptools-scm >=7.1
     - pip
   run:
-    - python >=3.7
+    - python >=3.10
     - pydot
     - sqlalchemy
     - typer
+    - toml
 
 test:
   imports:
