@@ -18,15 +18,16 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.10
     - setuptools >=67.0
     - setuptools-scm >=7.1
     - pip
   run:
-    - python >=3.7
+    - python >=3.10
     - pydot
     - sqlalchemy
     - typer
+    - toml
 
 test:
   imports:
