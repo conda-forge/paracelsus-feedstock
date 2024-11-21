@@ -1,12 +1,13 @@
 {% set name = "paracelsus" %}
 {% set version = "0.8.0" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/paracelsus-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/paracelsus-{{ version }}.tar.gz
   sha256: 0a2935cf2f1e1e91d478842e886bfeb4680c51c1db17de876490848e4f1862cb
 
 build:
@@ -18,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=67.0
     - setuptools-scm >=7.1
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - pydot
     - sqlalchemy
     - typer
@@ -37,6 +38,7 @@ test:
     - paracelsus --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/tedivm/paracelsus
