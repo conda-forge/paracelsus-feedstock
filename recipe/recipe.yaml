@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: paracelsus
-  version: 0.9.0
-  python_min: 3.10
+  version: "0.9.2"
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/paracelsus-${{ version }}.tar.gz
-  sha256: 9e8d504630b06a95f741dddc35acd283336c0daac81fb302f015e7e878482d80
+  sha256: a5cfdb9e4191d59456237fa830e50613bf42b703f610126df74cd9f34d6242f5
 
 build:
   number: 0
