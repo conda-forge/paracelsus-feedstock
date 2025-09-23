@@ -29,7 +29,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pydot
+    - pydot <4.0
     - sqlalchemy
     - typer
     - toml
