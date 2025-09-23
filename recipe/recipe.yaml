@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: paracelsus
   version: "0.11.0"
-  python_min: 3.10
 
 package:
   name: ${{ name|lower }}
@@ -29,7 +28,7 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pydot
+    - pydot <4.0
     - sqlalchemy
     - typer
     - toml
