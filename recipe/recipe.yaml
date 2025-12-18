@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: paracelsus
-  version: "0.13.3"
+  version: "0.14.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/paracelsus-${{ version }}.tar.gz
-  sha256: e347edd8718f9ebc8a13f55a985547896d9f18b3d048fd881b34b03a1bc73184
+  sha256: 3c573187781d577bff307f2782855c4c61f02c932ccab23a01a1bfb1c34e54ea
 
 build:
   number: 0
@@ -28,7 +28,8 @@ requirements:
     - pip
   run:
     - python >=${{ python_min }}
-    - pydot <4.0
+    - pydot >=3.0,<5.0
+    - packaging
     - sqlalchemy
     - typer
     - toml
