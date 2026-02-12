@@ -13,7 +13,7 @@ source:
   sha256: b850b56417eef7b5e301b09ba7d44655f3c76de8681699b93ef6ae410afeb278
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   python:
@@ -42,7 +42,7 @@ tests:
       python_version: ${{ python_min }}.*
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
     script:
       - paracelsus --help
 
